@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<div id="demo"></div>
+
+<script>
+function myFunction() {
+  // JS&DOM EXcercise Shalzabila w/Progate Advance Bootcamp
+  let x = document.getElementById("numb").value;
+  let text;
+  if (isNaN(x) || x < 1) {
+      text = "Invalid Input";
+    console.log(`input: ${x} hasil: ${text}`);
+  } else if(x%3==0  && x%5==0){
+    text = "FizzBuzz!";
+    console.log(`input: ${x} hasil: ${text}`);
+  }else if(x%3==0){
+    text = "Fizz!";
+    console.log(`input: ${x} hasil: ${text}`);
+  } else if(x%5==0){
+    text = "Buzz!";
+    console.log(`input: ${x} hasil: ${text}`);
+  }else{ text =x;
+  console.log(`input: ${x} hasil: ${text}`);}
+ 
+  y=document.getElementById("demo");
+  // membuat sebuah elemen "p"
+   const paragraf = document.createElement("p");
+   paragraf.innerHTML = text;
+
+// menambahkan element "p" kedalam elemen "div"
+   y.append(paragraf);
+   }
+</script>
+
+</body>
+</html> 
